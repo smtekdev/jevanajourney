@@ -1,0 +1,86 @@
+/* Vacasky - Tour & Travel Agency HTML Template */
+
+/* 
+	
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	
+*/
+/* Google Fonts  */
+@import url('../../../../../css2');
+
+@import url('bootstrap.css');
+@import url('global.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('sidebar.css');
+@import url('icofont.css');
+@import url('font-awesome.css');
+@import url('flaticon_sky-flat.css');
+@import url('animate.css');
+@import url('owl.css');
+@import url('swiper.min.css');
+@import url('jquery-ui.css');
+@import url('preloader.css');
+@import url('custom-animate.css');
+@import url('magnific-popup.css');
+@import url('odometer-theme-default.css');
+@import url('select2.css');
+@import url('flatpickr.css');
+@import url('custom.css');
+@import url('responsive.css');
+
+.package-block_two-box {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.package-block_two-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.banner-one {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* IMPORTANT */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* MOVING BACKGROUND */
+.banner-one_image-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;  /* wide for smooth loop */
+    height: 100%;
+    background-size: cover;
+    background-repeat: repeat-x; /* IMPORTANT for horizontal loop */
+    background-position: center;
+
+    animation: boatMove 35s linear infinite;
+    z-index: -1;
+}
+
+/* KEYFRAMES — FULL HORIZONTAL MOVEMENT */
+@keyframes boatMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-30%); /* adjust movement distance */
+    }
+}
+
+.banner-one .auto-container {
+    position: relative;
+    z-index: 9;
+}
