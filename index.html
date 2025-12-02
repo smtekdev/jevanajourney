@@ -674,15 +674,33 @@
 			<!-- Video One -->
 			<section class="video-one">
 				<div class="outer-container">
-					<div class="video-one_logo"><a href="index.html"><img src="images/logo.svg" alt="" title=""></a>
+					<div class="video-one_logo">
+						<a href="index.html"><img src="images/logo.png" alt="" title=""></a>
 					</div>
-					<div class="video-one_box wow bounce" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<img src="images/background/1.jpg" alt="" />
-						<a href="https://www.pexels.com/video/l-2942803/" class="play lightbox-video"><span
-								class="flaticon-play"><i class="ripple"></i></span></a>
+
+					<div class="video-one_box wow bounce animated" data-wow-delay="0ms" data-wow-duration="1500ms"
+						style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: bounce; position:relative;">
+
+						<!-- Background Image -->
+						<img src="images/background/1.jpg" alt="">
+
+						<!-- PLAY BUTTON (your exact play icon, unchanged) -->
+						<a id="playBtn" class="play"
+							style="cursor:pointer; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); z-index:10;">
+							<span class="flaticon-play"><i class="ripple"></i></span>
+						</a>
+
+						<!-- INLINE VIDEO (hidden initially) -->
+						<video id="inlineVideo"
+							style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:none;"
+							muted autoplay playsinline>
+							<source src="./video/202.mp4" type="video/mp4">
+						</video>
+
 					</div>
 				</div>
 			</section>
+
 			<!-- End Video One -->
 
 			<!-- Achivements One -->
@@ -1006,6 +1024,19 @@
 
 		<script src="js/script.js"></script>
 
+
+		<script>
+			document.getElementById("playBtn").addEventListener("click", function () {
+
+				// Show video
+				var video = document.getElementById("inlineVideo");
+				video.style.display = "block";
+				video.play();
+
+				// Hide play icon
+				this.style.display = "none";
+			});
+		</script>
 		<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 		<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
