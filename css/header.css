@@ -415,7 +415,7 @@ body.mr_menu_active .mr_menu_overlay {
 }
 /* Sticky/Fixed Nav */
 .fixed_menu .header{
-	background: var(--white-color);
+	background: #553318;
 	position: fixed;
 	top: -50px;
 	opacity: 0;
@@ -438,7 +438,7 @@ body.mr_menu_active .mr_menu_overlay {
 	visibility: hidden;
 }
 .fixed_menu .header .mainnav ul.main_menu > li:not(.active) > a {
-	color: var(--black-color);
+	color: #fff;
 }
 .fixed_menu .header .middle_bar_inner {
 	padding: 5px 0px;

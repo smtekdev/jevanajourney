@@ -797,11 +797,11 @@ img{
 }
 
 .btn-style-one:hover::before{
-    background-color: var(--main-color);
+    background-color: #553318;
 }
 
 .btn-style-one:hover{
-    border-color: var(--main-color);
+    border-color: #553318;
 }
 
 /* Btn Style Two */
